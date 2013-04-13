@@ -14,6 +14,8 @@ class Game
 		const char Empty = ' ';
 		const char Tie = 'T';
 		const char No_One = 'N';
+		int HumanScore = 0;
+		int CompScore = 0;
 
 	public:
 		void Instructions(void);

@@ -19,6 +19,9 @@ void Game::Instructions(void)
 	     << "\n\t6 | 7 | 8 "
 	     << "\n\n"
 		 << "*************************\n";
+
+	cout << "Current Score:\nHuman: " << HumanScore
+		 << "\nMachine: " << CompScore << "\n";
 }
 
 char Game::AskYesNo(string question)
@@ -206,11 +209,17 @@ int Game::ComputerMove(vector<char>& board, char computer)
 void Game::AnnounceWinner(char winner, char computer, char human)
 {
     /*Checks if someone won or if it is a tie */
-	if(winner == computer || winner == human)
+	if(winner == computer)
 	{
-		cout << winner << " has won!\n";
+		cout << "The machine won!\n";
+		CompScore++;
 	}
 
+	else if(winner == human)
+	{
+		cout << "You won!\n";
+		HumanScore++;
+	}
 	else
 	{
 		cout << "It's a tie!\n";
