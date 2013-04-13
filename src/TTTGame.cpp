@@ -10,6 +10,15 @@ void Game::Instructions(void)
 		 << "To make a move press a number from 0-8 "
 		 << "corresponding to the board.\n"
 		 << "*************************\n";
+
+	cout << "Dummy Board\n"
+		 << "\n\t0 | 1 | 2 "
+	     << "\n\t——————————"
+	     << "\n\t3 | 4 | 5 "
+	     << "\n\t——————————"
+	     << "\n\t6 | 7 | 8 "
+	     << "\n\n"
+		 << "*************************\n";
 }
 
 char Game::AskYesNo(string question)
